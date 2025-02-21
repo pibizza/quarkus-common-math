@@ -1,6 +1,11 @@
 name: Common Math
 #description: Do something useful.
 metadata:
+    codestart:
+        name: quarkus-common-math
+        languages:
+        - "java"
+        artifact: "io.quarkiverse:quarkus-common-math:codestarts:jar:${project.version}"
 #  keywords:
 #    - common-math
 #  guide: ... # To create and publish this guide, see https://github.com/quarkiverse/quarkiverse/wiki#documenting-your-extension

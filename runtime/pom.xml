@@ -3,11 +3,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>org.acme</groupId>
-        <artifactId>common-math-parent</artifactId>
+        <groupId>io.quarkiverse</groupId>
+        <artifactId>quarkus-common-math-parent</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
-    <artifactId>common-math</artifactId>
+    <artifactId>quarkus-common-math</artifactId>
     <name>Common Math - Runtime</name>
 
     <dependencies>
@@ -57,6 +57,27 @@
                     </execution>
                 </executions>
             </plugin>
-        </plugins>
+      <plugin>
+        <artifactId>maven-jar-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>generate-codestart-jar</id>
+            <phase>generate-resources</phase>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+            <configuration>
+              <classesDirectory>${project.basedir}/src/main</classesDirectory>
+              <includes>
+                <include>codestarts/**</include>
+              </includes>
+              <classifier>codestarts</classifier>
+              <skipIfEmpty>true</skipIfEmpty>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      
+</plugins>
     </build>
 </project>

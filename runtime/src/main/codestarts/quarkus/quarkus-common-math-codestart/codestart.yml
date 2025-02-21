@@ -1,0 +1,9 @@
+name: quarkus-common-math-codestart
+ref: quarkus-common-math
+type: code
+tags: extension-codestart
+metadata:
+  title: Commont Math
+  description: Start to code with the Commont Math extension.
+  related-guide-section: https://commons.apache.org/proper/commons-math/
+  path: /hello # (optional) for web extensions providing HTTP resources
